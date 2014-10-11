@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Studies have shown</title>
+        <meta name="description" content="Studies have shown that surfing the web is linked to increased butt cancer risks.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Studies have shown</h1>
+        <p id="quote">Studies have shown that accurate numbers aren't any more useful than the ones you make up.</p>
+        <p><span id="source">Albert Einstein</span> (<a href="#" id="url">link</a>)</p>
+        <script src="data.js"></script>
+        <script>
+        function loadQuote() {
+            var index = Math.floor(Math.random() * studies.length);
+            var quote = studies[index].quote;
+            var url = studies[index].url;
+            var source = studies[index].source;
+
+            var quotePara = document.getElementById("quote");
+            var sourceSpan = document.getElementById("source");
+            var urlA = document.getElementById("url");
+
+            quotePara.innerHTML = quote;
+            sourceSpan.innerHTML = source;
+            urlA.href = url;
+        }
+        loadQuote();
+
+    </script>
+</body>
+</html>
